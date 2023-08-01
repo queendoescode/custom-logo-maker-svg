@@ -1,0 +1,20 @@
+{
+  "name": "custom-logo-maker-svg",
+  "version": "1.0.0",
+  "description": "This tool is a Node.js command-line application that generates a logo in SVG format.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/queendoescode/custom-logo-maker-svg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/queendoescode/custom-logo-maker-svg/issues"
+  },
+  "homepage": "https://github.com/queendoescode/custom-logo-maker-svg#readme"
+}
