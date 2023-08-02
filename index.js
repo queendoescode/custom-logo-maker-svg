@@ -2,6 +2,32 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 
+function renderSvg(answers) {
+  return `<?xml version="1.0" standalone="no"?>
+    <svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    
+    
+      <rect x="20" y="120" width="160" height="50" fill="red"/>
+    
+      <circle cx="100" cy="100" r="60" fill="grey" opacity="0.5"/>
+    
+      <text x="10" y="10">
+        ${answers.text}
+      </text>
+    
+      <style>
+        <![CDATA[
+          text {
+            dominant-baseline: hanging;
+            font: 28px Arial, sans-serif;
+          }
+        ]]>
+      </style>
+    </svg>
+    `;
+}
+
+
 inquirer
   .prompt([
     {
@@ -25,9 +51,11 @@ inquirer
   ])
   .then(answers => {
 
+    const svgData = renderSvg(answers);
+
     fs.writeFile(
       "Generated/logo.svg", 
-      svg,
+      svgData,
       {},
       error => {
         if (error) {
