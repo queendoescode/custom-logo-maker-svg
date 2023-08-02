@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/queendoescode/custom-logo-maker-svg/issues"
   },
-  "homepage": "https://github.com/queendoescode/custom-logo-maker-svg#readme"
+  "homepage": "https://github.com/queendoescode/custom-logo-maker-svg#readme",
+  "dependencies": {
+    "inquirer": "^8.2.6"
+  }
 }
