@@ -4,7 +4,7 @@
   "description": "This tool is a Node.js command-line application that generates a logo in SVG format.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/queendoescode/custom-logo-maker-svg#readme",
   "dependencies": {
     "inquirer": "^8.2.6"
+  },
+  "devDependencies": {
+    "jest": "^29.6.2"
   }
 }
