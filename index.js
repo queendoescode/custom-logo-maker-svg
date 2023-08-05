@@ -1,17 +1,33 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const {Triangle, Circle, Square} = require('./lib/shapes');
 
+
+// This function makes the SVG string that will be written to the logo file
 
 function renderSvg(answers) {
+
+  let shapeObject;
+  switch (answers.shape) {
+    case "circle":
+      shapeObject = new Circle();
+      break;
+    case "triangle":
+      shapeObject = new Triangle();
+      break;
+    case "square":
+      shapeObject = new Square();
+      break;
+  }
+
+  shapeObject.setColor(answers.shapeColour);
+
   return `<?xml version="1.0" standalone="no"?>
-    <svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <svg width="400" height="400" version="1.1" xmlns="http://www.w3.org/2000/svg">
     
+      ${shapeObject.render()}
     
-      <rect x="20" y="120" width="160" height="50" fill="red"/>
-    
-      <circle cx="100" cy="100" r="60" fill="grey" opacity="0.5"/>
-    
-      <text x="10" y="10">
+      <text x="150" y="105" fill="${answers.textColour}">
         ${answers.text}
       </text>
     
@@ -19,7 +35,8 @@ function renderSvg(answers) {
         <![CDATA[
           text {
             dominant-baseline: hanging;
-            font: 28px Arial, sans-serif;
+            font: 40px Arial, sans-serif;
+            text-anchor: middle;
           }
         ]]>
       </style>
@@ -50,7 +67,6 @@ inquirer
     }
   ])
   .then(answers => {
-
     const svgData = renderSvg(answers);
 
     fs.writeFile(
