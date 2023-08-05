@@ -23,7 +23,7 @@ function renderSvg(answers) {
   shapeObject.setColor(answers.shapeColour);
 
   return `<?xml version="1.0" standalone="no"?>
-    <svg width="400" height="400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
     
       ${shapeObject.render()}
     
@@ -50,6 +50,13 @@ inquirer
     {
       name:"text", 
       message:"What is the text for the logo?",
+      validate: (input) => {
+        if (input.length <= 3) {
+          return true;
+        } else {
+          return "Enter no more than 3 characters"
+        }
+      }
     },
     {
       name:"textColour", 
