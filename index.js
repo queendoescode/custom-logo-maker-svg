@@ -35,7 +35,7 @@ function renderSvg(answers) {
         <![CDATA[
           text {
             dominant-baseline: hanging;
-            font: 40px Arial, sans-serif;
+            font: 40px "Times New Roman", serif;
             text-anchor: middle;
           }
         ]]>

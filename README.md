@@ -4,11 +4,11 @@ This tool is a Node.js command-line application that generates a logo in SVG for
 
 ## Screencastify
 
-[Screencastify to display the features of my project](https://imgur.com/hIOjYgy)
+[Screencastify to display the features of my project](https://imgur.com/Ed04dBt)
 
 ## Screenshots
 
-![A screenshot of the logo generator in use](./Screenshot%202023-08-05%20at%203.37.26%20PM.png)
+![A screenshot of the logo generator in use](./Screenshot%202023-08-05%20at%203.57.30%20PM.png)
 
 ## Sample output (SVG)
 
@@ -18,7 +18,7 @@ This tool is a Node.js command-line application that generates a logo in SVG for
 
 * [GitHub](https://github.com/queendoescode/custom-logo-maker-svg)
 
-* [Demo video](https://imgur.com/hIOjYgy)
+* [Demo video](https://imgur.com/Ed04dBt)
 
 ## Third Party Resources used by this site
 
