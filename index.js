@@ -84,7 +84,7 @@ inquirer
         if (error) {
           console.log("An error occurred writing the logo.");
         } else {
-          console.log("We made your logo. It can be found in the 'Generated' folder.");
+          console.log("Generated logo.svg");
         }
       });
 
