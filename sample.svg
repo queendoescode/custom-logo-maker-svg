@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+    <svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    
+      <circle cx="150" cy="120" r="80" fill="#303030" />
+    
+      <text x="150" y="105" fill="pink">
+        QEJ
+      </text>
+    
+      <style>
+        <![CDATA[
+          text {
+            dominant-baseline: hanging;
+            font: 40px Arial, sans-serif;
+            text-anchor: middle;
+          }
+        ]]>
+      </style>
+    </svg>
+    
